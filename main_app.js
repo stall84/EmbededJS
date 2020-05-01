@@ -33,3 +33,26 @@ app.get('/cats_and_dogs', (req,res) => {
         animalSound: 'Living Together'
     });
 });
+
+app.get('/nested-doggo', (req,res) => {
+    res.render('dog-info', {
+        dog_breed: {
+            schnauzer: {
+                name1: 'Carl',
+                name2: 'Von',
+                name3: 'Clauswitz'
+            },
+            retriever: {
+                name1: 'Sandy',
+                name2: 'Goldie',
+                name3: 'Getter'
+            },
+            chihuaua: {
+                name1: 'Duncan',
+                name2: 'Chicho',
+                name3: 'Pedro'
+            }
+
+        }
+    })
+})
