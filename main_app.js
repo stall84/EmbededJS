@@ -10,12 +10,14 @@ app.listen('3000', () => {
     console.log('Hello_World server running on port 3000');
 });
 
+// Express Exercise 1
 app.get('/', (req,res) => {
     res.render('helloWorld', {
         pageTitle: 'Hello WORLD!'
     });
 });
 
+// 2nd part of Exercise 1
 app.get('/cats', (req,res) => {
     res.render('Animals', {
         animalSound: 'MEOW!!'
@@ -34,6 +36,7 @@ app.get('/cats_and_dogs', (req,res) => {
     });
 });
 
+// testing out accessing nested objects
 app.get('/nested-doggo', (req,res) => {
     res.render('dog-info', {
         dog_breed: {
@@ -54,5 +57,25 @@ app.get('/nested-doggo', (req,res) => {
             }
 
         }
+    })
+});
+
+// Route parameters part of Exercise 1: Create a greeting for a URI specific user
+
+app.get('/greet/Kennedy', (req,res) => {
+    res.render('Users', {
+        userName: 'Kennedy'
+    })
+});
+
+app.get('greet/Jamison', (req,res) => {
+    res.render('Users', {
+        userName: 'Jamison'
+    })
+});
+
+app.get('/greet/Manny', (req,res) => {
+    res.render('Users', {
+        userName: 'Manny'
     })
 })
