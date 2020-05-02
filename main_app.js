@@ -97,3 +97,24 @@ app.get('/year', (req,res) => {
     })
     
 });
+
+app.get('/profile/:name', (req,res) => {
+    res.send('You are looking at the profile of: ' + req.params.name);
+});
+
+app.get('/home', (req,res) => {
+    res.render('landing');
+});
+
+app.get('/home/user', (req,res) => {
+    res.render('landing', {
+        userName: req.query.name
+    })
+});
+
+// setting a template header 
+app.get('/header', (req,res) => {
+    res.render('header', {
+        header: 'header'
+    })
+});
