@@ -68,7 +68,7 @@ app.get('/greet/Kennedy', (req,res) => {
     })
 });
 
-app.get('greet/Jamison', (req,res) => {
+app.get('/greet/Jamison', (req,res) => {
     res.render('Users', {
         userName: 'Jamison'
     })
@@ -79,3 +79,12 @@ app.get('/greet/Manny', (req,res) => {
         userName: 'Manny'
     })
 })
+
+// Query parameters: return year born when user inputs age in query param in url
+// this is actually fkn awesome
+app.get('/hello', (req,res) => {
+    let name = req.query.name;
+    res.render('Users', {
+        userName: name
+    })
+});
