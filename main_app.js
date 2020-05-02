@@ -88,3 +88,12 @@ app.get('/hello', (req,res) => {
         userName: name
     })
 });
+
+app.get('/year', (req,res) => {
+    let yearsOld = req.query.age;
+    let year = (2020 - yearsOld)
+    res.render('Ager', {
+        birthYear: year
+    })
+    
+});
