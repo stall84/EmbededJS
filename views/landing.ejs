@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= userName %>'s Landing Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        body{background: skyblue; font-family: verdana; color: #fff; padding: 30px;}
-        h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
-        p{font-size: 24px; text-align: center;}
-    </style>
-</head>
+<%- include('partials/main_head.ejs') %>
 <body>
-    
     <h1>Welcome To Awesomesite.com</h1>
     <div style="margin-top: 12rem;">
     <p>This is <%= userName %>'s page! </p>

@@ -6,8 +6,10 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-app.listen('3000', () => {
-    console.log('Hello_World server running on port 3000');
+app.use(express.static(__dirname + '/public'));
+
+app.listen('3003', () => {
+    console.log('Awesome-Server running on port 3003');
 });
 
 // Express Exercise 1
@@ -103,7 +105,7 @@ app.get('/profile/:name', (req,res) => {
 });
 
 app.get('/home', (req,res) => {
-    res.render('landing');
+    res.render('landing2');
 });
 
 app.get('/home/user', (req,res) => {
